@@ -6,12 +6,18 @@ on:
       - master
 
 jobs:
-  build:
+  syntax_and_semantic_validation:
+    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
-
     steps:
-    - name: Check out code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Run hello.py
-      run: python hello.py
+      - name: Syntax Validation
+        run:  echo "Syntax Validation"
+
+      - name: Semantic Validation
+        run:  echo "Semantic Validation"
+
+      - name: Run notification.py with parameter A
+        run: python notification.py -m syntax_and_semantic_validation

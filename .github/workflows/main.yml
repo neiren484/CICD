@@ -1,4 +1,4 @@
-name: neiren
+name: CICD
 
 on:
   push:

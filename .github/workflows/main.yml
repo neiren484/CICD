@@ -10,7 +10,7 @@ on:
 
 jobs:
   syntax_and_semantic_validation:
-    if: ${{ github.event_name == 'push' }}
+    #if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

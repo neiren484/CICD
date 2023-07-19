@@ -3,7 +3,7 @@ name: CI/CD
 on:
   push:
     branches:
-      - 'feature/*'
+      - 'neiren/*'
   pull_request:
     branches:
       - 'master'
